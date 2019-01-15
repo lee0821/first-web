@@ -1,0 +1,403 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+a,a:hover{
+  text-decoration: none;
+  color: #333;
+}
+ul{
+  list-style: none;
+}
+
+/* 通用样式 */
+.title-container{
+  width: 1200px;
+  height: 60px;
+  padding: 16px 16px 0 16px;
+  position: relative;
+}
+.title-container .port_r{
+  width: 65px;
+  height: 23px;
+  padding: 0;
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+}
+.title-container .port_r *:hover{
+  color: orangered;
+}
+
+.list-container {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+}
+.list-container .list{
+  width: 1200px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.list-container .list ul {
+  width: 3000px;
+  height: 340px;
+}
+.list-container .list ul li {
+  width: 230px;
+  margin-right: 12.5px;
+  float: left;
+}
+/* ----------------------- */
+/* top style 头部 div 样式 */
+
+.Mi-top{
+  width: 100%;
+  height: 140px;
+  padding: 0;
+  position: relative;
+}
+.Mi-top .top-menu{
+  width: 100%;
+  height: 40px;
+  padding: 0 200px;
+  line-height: 40px;
+  background-color: #444;
+}
+.Mi-top .top-menu .top-list a{
+  font-size: 12px;
+  color: #aaa;
+}
+.Mi-top .top-menu .top-list a:hover{
+  color: #fff;
+}
+.Mi-top .top-menu .top-list span{
+  font-size: 13px;
+  color: #333;
+}
+.Mi-top .top-menu .top-l{
+  float: left;
+}
+.Mi-top .top-menu .top-r{
+  float: right;
+}
+
+.Mi-top .shop-menu{
+  /* width: 100%; */
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 25px 0;
+  /* background-color: #fff000; */
+}
+.Mi-top .shop-menu .logo{
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.Mi-top .shop-menu .logo img{
+  width: 100%;
+}
+.Mi-top .shop-menu .shop-list{
+  width: 600px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+.Mi-top .shop-menu .shop-list a{
+  display: inline-block;
+  height: 100px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.Mi-top .shop-menu .shop-list a:hover{
+  color: orangered;
+}
+.Mi-top .shop-menu [class^="pro-list"]{
+  position: absolute;
+  top: 140px;
+  left: 0;
+  display: none;
+  transition: 0.5s;
+}
+.Mi-top .shop-menu .shop-list a:hover img{
+  display: block;
+  z-index: 100;
+}
+.Mi-top .shop-menu .search{
+  width: 250px;
+  height: 50px;
+  background-color: red;
+  float: right;
+}
+.Mi-top .shop-menu .search input{
+  float: left;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #aaa;
+}
+.Mi-top .shop-menu .search input:hover,
+.Mi-top .shop-menu .search input:hover+.sch-button,{
+  border-color: orangered;
+}
+.Mi-top .shop-menu .search .sch-button{
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  line-height: 50px;
+  text-align: center;
+}
+.Mi-top .shop-menu .search .sch-button:hover{
+  background-color: orangered;
+  border-color: orangered;
+  color: #fff;
+}
+.Mi-top .shop-menu .search .sch-button::before{
+  content: "\e003";
+}
+/* banner style banner div 样式 */
+
+.Mi-banner{
+  width: 100%;
+  height: 1040px;
+}
+.Mi-banner .swiper-container{
+  width: 1200px;
+  height: 450px;
+  margin: 0 auto;
+  background-color: red;
+  position: relative;
+}
+.Mi-banner .swiper-container .swiper{
+  width: 1200px;
+  height: 450px;
+}
+.Mi-banner .swiper-container .left_list{
+  width: 300px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Mi-banner .swiper-container .left_list ul{
+  width: 300px;
+  height: 450px;
+  padding: 25px 0;
+  line-height: 40px;
+  position: relative;
+}
+.Mi-banner .swiper-container .left_list ul li{
+  width: 300px;
+  height: 40px;
+  padding: 0 16px 0 25px;
+  color: #fff;
+}
+.Mi-banner .swiper-container .left_list ul li div{
+  position: absolute;
+  top: 0;
+  left: 300px;
+  display: none;
+  z-index: 100;
+}
+.Mi-banner .swiper-container .left_list ul li div img{
+  height: 450px;
+}
+.Mi-banner .swiper-container .left_list ul li:hover{
+  background-color: orangered;
+}
+.Mi-banner .swiper-container .left_list ul li:hover div{
+  display: block;
+}
+.Mi-banner .swiper-container .left_list ul li::after{
+  content: '>';
+  color: #eee;
+  font-weight: bold; 
+  float: right;
+}
+
+.Mi-banner .event-container {
+  width: 1200px;
+  height: 170px;
+  margin: 0 auto;
+  margin-top: 10px
+}
+.Mi-banner .event-container .event-item{
+  height: 170px;
+  float: left;
+}
+.Mi-banner .event-container .event-item img{
+  width: 100%;
+}
+.Mi-banner .event-container .service{
+  width: 234px;
+}
+.Mi-banner .event-container .event{
+  width: 315px;
+  margin-left: 7px;
+}
+.title-container .port_r .turnbtn{
+  display: block;
+  width: 30px;
+  height: 23px;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+.title-container .port_r .btn_l{
+  float: left;
+}
+.title-container .port_r .btn_r{
+  float: right;
+}
+/* content style 内容 div 样式 */
+
+.Mi-content{
+  width: 100%;
+  /* height: 6800px; */
+  background-color: #fafafafa;
+}
+.Mi-content .pro-items{
+  width: 1200px;
+  height: 675px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.Mi-content .pro-items .col{
+  width: 230px;
+  height: 615px;
+  margin-right: 12.5px;
+  padding: 0px;
+  float: left;
+  position: relative;
+}
+.Mi-content .pro-items .col:last-child{
+  margin-right: 0;
+}
+.Mi-content .pro-items .col div{
+  width: 230px;
+  height: 300px;
+  margin-bottom: 15px;
+  background-color: #eee; 
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.8s;
+}
+.Mi-content .pro-items .col div:hover{
+  top:-8px;
+  box-shadow: 0px 0px 10px #aaa;
+}
+.Mi-content .pro-items .col .lg{
+  height: 615px;
+}
+.Mi-content .pro-items .col .sm{
+  height: 145px;
+}
+.Mi-content .pro-items-2{
+  width: 1200px;
+  height: 480px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.Mi-content .pro-items-2 .item{
+  width: 294px;
+  height: 420px;
+  float: left;
+  margin-right: 8px;
+  background-color: black;
+}
+.Mi-content .pro-items-2 .item:last-child{
+  margin-right: 0;
+}
+
+
+/* footer style 页脚 div 样式 */
+
+.Mi-footer{
+  width: 100%;
+  height: 450px;
+}
+.Mi-footer .afs-container{
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 27.5px 0;
+  border-bottom: 1px solid #ccc;
+}
+.Mi-footer .afs-container a{
+  display: block;
+  width: 240px;
+  height: 25px;
+  float: left;
+  /* font-size: 25px; */
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+.Mi-footer .afs-container a:first-child{
+  border-left: none;
+}
+.Mi-footer .afs-container a:hover{
+  color: orange;
+}
+.Mi-footer .service-container{
+  width: 1200px;
+  height: 190px;
+  margin: 0 auto;
+  padding: 40px 0;
+  /* background-color: #aaa; */
+}
+.Mi-footer .service-container .problem-tab{
+  width: 960px;
+  height: 110px;
+  float: left;
+}
+.Mi-footer .service-container .problem-tab ul{
+  width: 160px;
+  height: 110px;
+  float: left;
+}
+.Mi-footer .service-container .problem-tab ul li:first-child{
+  height: 35px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.Mi-footer .service-container .problem-tab ul li{
+  width: 160px;
+  height: 25px;
+  color: #666;
+  font-size: 14px;
+}
+.Mi-footer .service-container .problem-tab ul li a{
+  color: #666;
+}
+.Mi-footer .service-container .problem-tab ul li a:hover{
+  color: orange;
+}
+.Mi-footer .service-container .phone_call{
+  width: 240px;
+  height: 110px;
+  border-left: 1px solid #ccc;
+  float: right;
+  text-align: center;
+}
+.Mi-footer .service-container .phone_call p{
+  font-size: 18px;
+  color: orangered;
+}
+.Mi-footer .service-container .phone_call span{
+  color: #666;
+  font-size: 14px;
+}
+.Mi-footer .service-container .phone_call .call{
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  padding: 6px 20px;
+  font-size: 14px;
+  border: 1px solid orangered;
+}
