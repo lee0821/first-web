@@ -25,24 +25,23 @@ function cartGet(name,price){
     var newInfo = {}
     newInfo.name = name
     newInfo.price = price
-    newInfo.count = 0
-    console.log(newInfo)
+    newInfo.count = 1
     rebuild = chargeTS(name);
     console.log(rebuild);
     (rebuild || !cartInfo.length) &&cartInfo.push(newInfo)
-    console.log(cartInfo)
 }
 
 function chargeTS(name){
-    // console.log(rebuild)
     for(let i=0;i< cartInfo.length;i ++){
-        console.log(name == cartInfo[i].name)
         if(! cartInfo.length) return false
         else if(name == cartInfo[i].name){
             cartInfo[i].count ++;
             return false
         }else{
-            if(i == cartInfo.length)  return true 
+            if(i == cartInfo.length-1){
+                return true
+            }
+            continue
         }
     }
 }
