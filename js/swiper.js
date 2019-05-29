@@ -1,21 +1,10 @@
 console.log('swiper.js')
 
 
+
 var swiper = document.getElementById('swiper');
 var swiperBox = swiper.getElementsByClassName('swiper-box')[0]
-var dot = swiper.getElementsByClassName('dots')
-
-// function turnPage(num){
-//     var now = Math.round(swiperBox.offsetLeft/swiper.offsetWidth)
-//     console.log(now)
-//     if(now <= -4){
-//         swiperBox.style.left = '0%'
-//     }else{
-//         swiperBox.style.left = (now + num) * 100 +'%'
-//     }
-// }
-
-
+var dots = swiper.getElementsByClassName('dots')[0].getElementsByTagName('span')
 
 function turnPage(num){
     var now = Math.round(swiperBox.offsetLeft/swiper.offsetWidth)
@@ -26,19 +15,40 @@ function turnPage(num){
         next = -4
     }
     swiperBox.style.left = next*100+'%'
-    
+    dotsLight(next)
 }
 
-var timer = setInterval(function(){console.log(11)},1000)
+function dotsLight(now){
+    var length = Math.round(swiperBox.offsetWidth/swiper.offsetWidth)
+    for(let i=0;i < length;i ++){
+        dots[i].className = ''  
+    }
+    dots[now*-1].className = 'light'
+}
+
 function autoPlay(btn){
     if(btn){
-        timer()
-    }clearInterval(timer)
+        timer = setInterval(()=>{turnPage(-1)},5000)
+        // console.log(1)
+    }else{
+        clearInterval(timer)
+    }
 }
 
-autoPlay(1)
-
-function mouseOver(){
-    console.log(event)
-    autoPlay
+function dotsTap(){    
+    for(let i=0;i<dots.length;i++){
+        dots[i].addEventListener('click',()=>{  
+            var now = Math.round(swiperBox.offsetLeft/swiper.offsetWidth)
+            var index = now + i
+            turnPage(-1*index)
+        },false)
+    }
 }
+
+swiper.addEventListener('mouseover',()=>{
+    autoPlay(0)
+})
+
+swiper.addEventListener('mouseout',()=>{
+    autoPlay(1)
+})

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1217556_ioz55bnj0ob.css">
+    <style>
+        .test{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 100px auto;
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .box{
+            width: 41px;
+            height: 69px;
+            background: url(./img/other/ad_ctr.png) no-repeat center;
+            background-size: 50%;
+            /* background: #aaa; */
+        }
+    </style>
+</head>
+<body>
+    <div class="test"></div>
+    <i class="icon-refresh"></i>
+    <img src="./img/other/ad_ctr.png" alt="">
+    <div class="box"></div>
+    <script>
+        document.getElementsByClassName('test')[0].addEventListener('mouseover',()=>{
+            console.log(11)
+        },false)
+
+        
+        // document.getElementById('btn').addEventListener('click', function(){
+        //     alert(1);
+        // }, false);
+    </script>
+</body>
+</html>

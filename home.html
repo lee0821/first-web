@@ -32,6 +32,7 @@
         <a href="##">小米商城移动版</a><span> | </span>
         <a href="##">Select Region</a>
       </div>
+      <button id="carBtn"></button>
       <div class="top-list top-r">
         <a href="##">登录</a>
         <a href="##">注册</a>
@@ -81,7 +82,7 @@
   <div class="Mi-banner">
     <div class="swiper-container">
       
-      <div id="swiper" onmouseover="mouseOver()">
+      <div id="swiper">
         <div class="swiper-box">
           <div class="swiper-item">
             <h1> banner 1</h1>
@@ -99,8 +100,8 @@
             <h1> banner 5</h1>
           </div>
         </div>
-        <button class="swiper-btn" onclick="turnPage(-1)"></button>
-        <button class="swiper-btn btn_R" onclick="turnPage(+1)"></button>
+        <button class="swiper-btn" onclick="turnPage(+1)"></button>
+        <button class="swiper-btn btn_R" onclick="turnPage(-1)"></button>
         <div class="dots">
           <span class="light"></span>
           <span></span>
@@ -194,19 +195,33 @@
           <div class="port_r"><span>查看全部</span></div>
         </div>
       <div class="col">
-        <div class="lg"></div>
+        <div class="lg">11
+            <button onclick="cartGet('pen',11)">买</button>
+        </div>
       </div>
       <div class="col">
-        <div></div>
-        <div></div>
+        <div>22
+          <button onclick="cartGet('paper',22)">买</button>
+        </div>
+        <div>33
+            <button onclick="cartGet()">买</button>
+        </div>
       </div>
       <div class="col">
-        <div></div>
-        <div></div>
+        <div>44
+            <button onclick="cartGet()">买</button>
+        </div>
+        <div>22
+            <button onclick="cartGet()">买</button>
+        </div>
       </div>
       <div class="col">
-        <div></div>
-        <div></div>
+        <div>23
+            <button onclick="cartGet()">买</button>
+        </div>
+        <div>41
+            <button onclick="cartGet()">买</button>
+        </div>
       </div>
       <div class="col">
         <div></div>
@@ -411,5 +426,12 @@
 
   <script src="./js/heroList.js"></script>
   <script src="./js/swiper.js"></script>
+  <script src="./js/cart.js"></script>
+  <script>
+    window.onload = () =>{
+      autoPlay(1)
+      dotsTap()
+    }
+  </script>
 </body>
 </html>
